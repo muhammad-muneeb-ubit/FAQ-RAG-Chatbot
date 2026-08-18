@@ -8,7 +8,8 @@ import os
 load_dotenv()
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-df = pd.read_csv("data/faq_dataset.csv",  encoding="latin1")
+# df = pd.read_csv("data/faq_dataset.csv",  encoding="latin1")
+df = pd.read_csv("data/python_ai_ml_faq_dataset.csv",  encoding="latin1")
 
 documents = []
 for _, row in df.iterrows():
@@ -17,7 +18,7 @@ for _, row in df.iterrows():
         Answer: {row['Answer']}      
     """
     metadata = {
-        "source": "faq_dataset.csv",
+        "source": "python_ai_ml_faq_dataset.csv",
         "question": row['Question'],
         "answer": row['Answer'],
     }
@@ -38,6 +39,6 @@ vector_store = Chroma.from_documents(
     embedding=embeddings,
     persist_directory="./db"
 )
-# print("DB Collection count:", vector_store._collection.count())
+print("DB Collection count:", vector_store._collection.count())
 
 

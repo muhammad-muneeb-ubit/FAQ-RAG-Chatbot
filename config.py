@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-import streamlit as st
+import streamlit as st # type: ignore
 
 @st.cache_resource
 def load_llm():
