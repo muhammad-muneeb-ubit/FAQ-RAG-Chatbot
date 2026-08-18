@@ -1,0 +1,89 @@
+question,answer
+What is Python?,"Python is a high-level, interpreted, general-purpose programming language known for its readable syntax and large ecosystem of libraries."
+Why is Python popular?,"Python is popular because it has simple syntax, a large standard library, many third-party packages, and is widely used in web development, automation, data science, AI, and machine learning."
+Is Python difficult for beginners?,Python is generally considered beginner-friendly because its syntax is relatively simple and readable.
+How do I install Python?,"Download Python from the official Python website, install it, and verify the installation from a terminal with the Python version command."
+What is a Python variable?,A variable is a name that refers to a value or object in Python. Python variables do not require an explicit type declaration.
+What are Python data types?,"Common Python data types include int, float, str, bool, list, tuple, set, dict, and NoneType."
+What is the difference between a list and a tuple?,"A list is mutable, while a tuple is immutable. Lists are useful when values may change; tuples are useful for fixed collections of values."
+What is a Python dictionary?,A dictionary stores data as key-value pairs and is useful for looking up values by their keys.
+What is a Python set?,A set is an unordered collection of unique elements and is useful for removing duplicates and performing set operations.
+What is a Python string?,"A string is a sequence of characters enclosed in single, double, or triple quotes."
+How do I create a list in Python?,"A list can be created using square brackets, for example: numbers = [1, 2, 3]."
+How do I add an item to a Python list?,"Use append() to add one item to the end of a list, or extend() to add multiple items."
+How do I remove an item from a list?,"You can use remove() to remove a matching value, pop() to remove an item by position, or del to delete by index or slice."
+What is list comprehension?,"List comprehension is a concise way to create a list by applying an expression to items from an iterable, optionally with a condition."
+What is a Python loop?,A loop repeatedly executes a block of code. Python commonly uses for loops and while loops.
+What is the difference between for and while loops?,"A for loop is commonly used to iterate over an iterable, while a while loop repeats while a condition remains true."
+What is an if statement in Python?,An if statement executes code when a condition is true. Python also supports elif and else branches.
+What is a Python function?,A function is a reusable block of code defined with def. It can accept arguments and return a value.
+What are *args and **kwargs?,"*args collects extra positional arguments into a tuple, while **kwargs collects extra keyword arguments into a dictionary."
+What is a lambda function?,"A lambda is a small anonymous function written as a single expression, commonly used for short operations."
+What is a Python module?,"A module is a Python file containing code such as functions, classes, and variables that can be imported into another program."
+What is a Python package?,A package is a collection of related Python modules organized as a directory structure.
+What is pip?,pip is the standard Python package installer used to install and manage packages from Python package indexes.
+What is a virtual environment?,A virtual environment creates an isolated Python environment so project dependencies can be installed without affecting other projects.
+What is exception handling in Python?,"Exception handling lets a program respond to runtime errors using constructs such as try, except, else, and finally."
+What is the difference between == and is in Python?,"== compares values for equality, while is checks whether two references point to the same object."
+What is None in Python?,None represents the absence of a value and is a singleton object commonly used to indicate no result or missing value.
+What is PEP 8?,PEP 8 is the main style guide for Python code and provides recommendations for readable and consistent formatting.
+What is NumPy?,NumPy is a Python library for numerical computing that provides multidimensional arrays and efficient mathematical operations.
+What is a NumPy array?,A NumPy array is a multidimensional data structure designed for efficient numerical computation.
+Why use NumPy instead of Python lists?,NumPy arrays provide efficient vectorized numerical operations and are generally more suitable for large numerical datasets.
+What is Pandas?,"Pandas is a Python library for data manipulation and analysis, especially useful for tabular data."
+What is a Pandas DataFrame?,"A DataFrame is a two-dimensional labeled data structure in Pandas, similar to a spreadsheet or database table."
+How do I read a CSV file with Pandas?,Use pandas.read_csv() to load a CSV file into a DataFrame.
+How do I handle missing values in Pandas?,"Common approaches include detecting missing values with isna(), removing them with dropna(), or replacing them with fillna()."
+What is groupby in Pandas?,groupby() groups rows according to one or more columns so that aggregation or transformation operations can be performed on each group.
+How do I remove duplicate rows in Pandas?,Use DataFrame.drop_duplicates() to remove duplicate rows.
+What is data preprocessing?,"Data preprocessing prepares raw data for analysis or machine learning by handling issues such as missing values, duplicates, inconsistent formats, and categorical data."
+What is machine learning?,Machine learning is a field of AI where algorithms learn patterns from data to make predictions or decisions.
+What is supervised learning?,Supervised learning trains a model using labeled examples where the target output is known.
+What is unsupervised learning?,Unsupervised learning finds patterns or structures in data without requiring labeled target values.
+What is classification in machine learning?,"Classification predicts a categorical class, such as spam or not spam."
+What is regression in machine learning?,"Regression predicts a continuous numerical value, such as salary or house price."
+What is clustering?,Clustering is an unsupervised learning technique that groups similar data points together.
+What is a training dataset?,A training dataset is the portion of data used to learn the parameters and patterns of a machine learning model.
+What is a test dataset?,A test dataset is held-out data used to evaluate how well a trained model generalizes to unseen examples.
+What is a validation dataset?,A validation dataset is used during model development to tune hyperparameters and compare model configurations.
+What is overfitting?,Overfitting occurs when a model learns the training data too closely and performs poorly on unseen data.
+What is underfitting?,Underfitting occurs when a model is too simple to capture important patterns in the data.
+What is feature engineering?,"Feature engineering creates, transforms, or selects input variables to make useful patterns easier for a machine learning model to learn."
+What is feature scaling?,"Feature scaling transforms numerical features to comparable ranges, which can be important for algorithms sensitive to feature magnitude."
+What is one-hot encoding?,One-hot encoding represents categorical values as separate binary features.
+What is a confusion matrix?,"A confusion matrix summarizes classification predictions using true positives, true negatives, false positives, and false negatives."
+What is accuracy in machine learning?,Accuracy is the proportion of all predictions that are correct.
+What is precision?,Precision is the proportion of predicted positive cases that are actually positive.
+What is recall?,Recall is the proportion of actual positive cases that the model correctly identifies.
+What is F1 score?,F1 score is the harmonic mean of precision and recall and is useful when both are important.
+What is ROC-AUC?,ROC-AUC measures how well a binary classifier ranks positive examples above negative examples across classification thresholds.
+What is cross-validation?,Cross-validation repeatedly splits data into training and validation portions to estimate model performance more reliably.
+What is XGBoost?,XGBoost is a gradient boosting library commonly used for classification and regression on structured data.
+What is CatBoost?,CatBoost is a gradient boosting library designed to work especially well with categorical features while reducing the need for extensive preprocessing.
+What is deep learning?,Deep learning is a branch of machine learning that uses neural networks with multiple layers to learn complex patterns.
+What is a neural network?,A neural network is a model made of interconnected layers of computational units that learn patterns from data.
+What is an artificial neuron?,An artificial neuron combines input values using weights and a bias and passes the result through an activation function.
+What is an activation function?,"An activation function introduces non-linearity into a neural network, allowing it to learn complex relationships."
+What is ReLU?,"ReLU, or Rectified Linear Unit, returns zero for negative inputs and the input itself for positive inputs and is widely used in neural networks."
+What is an epoch?,An epoch is one complete pass through the training dataset during model training.
+What is a batch size?,Batch size is the number of training examples processed before a model updates its parameters.
+What is a learning rate?,The learning rate controls how large the parameter updates are during model optimization.
+What is backpropagation?,Backpropagation calculates how the loss changes with respect to neural network parameters so an optimizer can update them.
+What is TensorFlow?,"TensorFlow is an open-source machine learning framework used to build and train models, including neural networks."
+What is Keras?,Keras is a high-level deep learning API commonly used with TensorFlow to build and train neural networks.
+What is a CNN?,A convolutional neural network is a neural network architecture commonly used for image and spatial data because it can learn local patterns.
+What is an RNN?,A recurrent neural network is designed to process sequential data by maintaining information from previous steps.
+What is a transformer model?,A transformer is a neural network architecture based primarily on attention mechanisms and is widely used for language and other sequence tasks.
+What is artificial intelligence?,"Artificial intelligence is the broader field of building systems that perform tasks associated with capabilities such as reasoning, perception, learning, and language understanding."
+"What is the difference between AI, machine learning, and deep learning?","AI is the broad field, machine learning is a subset that learns from data, and deep learning is a subset of machine learning based on multi-layer neural networks."
+What is natural language processing?,"Natural language processing, or NLP, focuses on enabling computers to process, understand, and generate human language."
+What is an embedding?,An embedding is a numerical vector representation of data such as text that captures semantic relationships and can be used for similarity search.
+What is a vector database?,A vector database stores vector representations and supports similarity search over those vectors.
+What is semantic search?,Semantic search retrieves information based on meaning and context rather than relying only on exact keyword matches.
+What is RAG?,Retrieval-Augmented Generation combines retrieval from a knowledge base with language-model generation so responses can use relevant external information.
+What is LangChain?,"LangChain is a framework for developing applications that combine language models with prompts, retrieval, tools, memory, and other components."
+What is a chatbot?,A chatbot is a software application that interacts with users through conversational input and output.
+What is a large language model?,A large language model is a neural network trained on large amounts of text to understand and generate language.
+What is prompt engineering?,Prompt engineering is the practice of designing instructions and context to guide a language model toward useful and reliable outputs.
+What is hallucination in an LLM?,"An LLM hallucination is a generated statement that appears plausible but is unsupported, incorrect, or fabricated."
+How can RAG reduce hallucinations?,"RAG can reduce hallucinations by retrieving relevant source information and providing it to the language model as context, although it cannot guarantee correctness."
