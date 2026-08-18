@@ -296,21 +296,19 @@ st.markdown(
 )
 
 if not st.session_state.messages:
-    st.markdown(
-        """
-        <div class="welcome-card">
-        ### 👋 Welcome!
-        I can help you find answers from the Python FAQ dataset.
-        Try asking:
-        - What is Python?
-        - How do I create a list in Python?
-        - What is a Python dictionary?
-        - How do I install Python?
-        - Is Python difficult for beginners?
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+   st.markdown("""
+### 👋 Welcome!
+
+I can help you find answers from the **Python FAQ dataset**.
+
+Try asking:
+
+- What is Python?
+- How do I create a list in Python?
+- What is a Python dictionary?
+- How do I install Python?
+- Is Python difficult for beginners?
+""")
 
 for message in st.session_state.messages:
     with st.chat_message(
