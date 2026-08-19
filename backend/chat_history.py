@@ -1,4 +1,4 @@
-from backend.database import get_connection
+from database import get_connection
 from langchain_core.messages import HumanMessage, AIMessage
 
 def get_chat_history(chat_id):

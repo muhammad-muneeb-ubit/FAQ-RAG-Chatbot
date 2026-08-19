@@ -1,4 +1,4 @@
-from backend.database import get_connection
+from database import get_connection
 
 def test_database():
     conn = get_connection()

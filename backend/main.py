@@ -1,10 +1,10 @@
 from fastapi import FastAPI # type: ignore
-from backend.crud import chats, create_message, test_database, get_messages, create_chat
-from backend.schema import Chat_Create, Message_Create
-from backend.rag import ask_question
-from backend.chat_history import get_chat_history
+from crud import chats, create_message, test_database, get_messages, create_chat
+from schema import Chat_Create, Message_Create
+from rag import ask_question
+from chat_history import get_chat_history
 from fastapi.middleware.cors import CORSMiddleware
-
+ 
 app = FastAPI(
     title="FAQ RAG Chatbot API"
 )

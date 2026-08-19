@@ -7,7 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from typer.cli import docs
 from pathlib import Path
 
-from backend.chat_history import format_chat_history
+from chat_history import format_chat_history
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = BASE_DIR / "db"
