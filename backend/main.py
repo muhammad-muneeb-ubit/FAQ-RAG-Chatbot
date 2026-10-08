@@ -2,7 +2,7 @@ from backend.model import TransliterationRequest
 from fastapi import FastAPI # type: ignore
 from backend.config import llm, rewrite_llm
 from backend.crud import chats, clean_text_for_tts, contains_urdu_script, create_message, test_database, get_messages, create_chat, transliterate_to_roman_urdu
-from backend.schema import Chat_Create, Message_Create
+from backend.schema import Chat_Create, Message_Create, TelephonyMessage
 from backend.rag import ask_question, ask_question_stream
 from backend.chat_history import get_chat_history
 from fastapi.middleware.cors import CORSMiddleware #type: ignore
@@ -196,3 +196,56 @@ async def prepare_tts(request: TransliterationRequest):
     }
 
   
+@app.post("/telephony/chat")
+def telephony_chat(message: TelephonyMessage):
+
+    logger.info(
+        "Telephony request received: %s",
+        message.message
+    )
+
+    # Temporary dedicated telephony chat
+    TELEPHONY_CHAT_ID = 35
+
+    # Save caller message
+    create_message(
+        TELEPHONY_CHAT_ID,
+        "human",
+        message.message
+    )
+
+    # Get conversation history
+    history = get_messages(
+        TELEPHONY_CHAT_ID
+    )
+
+    chat_history = history["messages"]
+
+    # Rewrite question for retrieval
+    rewritten_question = rewrite_query(
+        message.message,
+        rewrite_llm
+    )
+
+    logger.info(
+        "Telephony rewritten query: %s",
+        rewritten_question
+    )
+
+    # Run existing RAG
+    response, results, reranked_docs = ask_question(
+        question=rewritten_question,
+        chat_history=chat_history,
+        original_question=message.message
+    )
+
+    # Save assistant response
+    create_message(
+        TELEPHONY_CHAT_ID,
+        "assistant",
+        response
+    )
+
+    return {
+        "response": response
+    }

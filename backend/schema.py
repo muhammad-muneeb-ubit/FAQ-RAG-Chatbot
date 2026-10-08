@@ -7,3 +7,6 @@ class Message_Create(BaseModel):
     chat_id: int
     role: str
     content: str
+
+class TelephonyMessage(BaseModel):
+    message: str
