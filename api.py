@@ -44,6 +44,8 @@ def ask_question(chat_id, question):
     response = requests.post(
         f"{BASE_URL}/chats/{chat_id}/ask",
         json={
+             "chat_id": chat_id,
+            "role": "user",
             "content": question
         }
     )

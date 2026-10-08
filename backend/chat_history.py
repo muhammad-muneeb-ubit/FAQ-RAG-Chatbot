@@ -1,7 +1,8 @@
-from database import get_connection
+from backend.database import get_connection
 from langchain_core.messages import HumanMessage, AIMessage
 
 def get_chat_history(chat_id):
+    
     conn = get_connection()
     try:
         cursor = conn.cursor()
@@ -34,6 +35,7 @@ def get_chat_history(chat_id):
         cursor.close()
         conn.close()
         
+
 def format_chat_history(messages):
 
     if not messages:
